@@ -1,33 +1,33 @@
 {
-  "name": "gp",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "axios": "^1.2.1",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
-    "next": "13.0.6",
-    "prettier": "^2.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "gp",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "axios": "^1.2.1",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.1.0",
+        "next": "13.0.6",
+        "prettier": "^2.8.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,jsx}": [
+            "npm run format",
+            "git add"
+        ]
     }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx}": [
-      "npm run format",
-      "git add"
-    ]
-  }
 }
