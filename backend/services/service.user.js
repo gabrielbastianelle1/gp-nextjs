@@ -1,42 +1,41 @@
-const users = require('../database/database')
+const User = require('../models/model.User')
+const jwt = require('jsonwebtoken')
 
-export function signinService({ email, password }) {
-    return new Promise((resolve, reject) => {
-        let result = users.filter((element) => {
-            if (element.email == email) {
-                return element
+let userService = {
+    updateProfile: function ({ userEmail, valuesToUpdate }) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                let response = await User.findOneAndUpdate(
+                    { email: userEmail },
+
+                    valuesToUpdate,
+                    { new: true }
+                )
+                let token = jwt.sign({ user: response }, process.env.SECRET_KEY)
+
+                if (!response) reject('nothing updated')
+                return resolve(token)
+            } catch (erro) {
+                return reject(erro)
             }
         })
+    },
 
-        if (result.length == 0) {
-            reject('email nao cadastrado')
-        }
-
-        if (result[0].password != password) {
-            reject('password errada')
-        }
-
-        resolve('logado')
-    })
-}
-
-export function signupService({ email, password }) {
-    return new Promise((resolve, reject) => {
-        let result = users.filter((element) => {
-            if (element.email == email) {
-                return element
+    deleteUser: function ({ userEmail }) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                let response = await User.findOneAndUpdate(
+                    { email: userEmail },
+                    { state: false }
+                ).exec()
+                let token = jwt.sign({ user: response }, process.env.SECRET_KEY)
+                if (!response) reject('nothing updated')
+                return resolve(token)
+            } catch (erro) {
+                return reject(erro)
             }
         })
-
-        if (result.length != 0) {
-            reject('email ja existente')
-        }
-
-        users.push({
-            email,
-            password
-        })
-
-        resolve('conta criada')
-    })
+    }
 }
+
+module.exports = userService
