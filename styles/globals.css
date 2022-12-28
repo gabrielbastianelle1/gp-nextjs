@@ -12,9 +12,7 @@
 }
 
 @layer components {
-
-    .button{
+    .button {
         @apply bg-green-500 rounded-3xl text-3xl;
     }
-
 }
