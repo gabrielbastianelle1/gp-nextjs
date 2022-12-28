@@ -12,7 +12,8 @@ module.exports = {
                 colorButton: 'var(--color-button)',
                 userBackground: 'var(--color-background)',
                 headerList: 'var(--color-headerlist)',
-                input: 'var(--color-input)'
+                input: 'var(--color-input)',
+                sidebar: 'var(--color-sidebar)'
             },
             fontFamily: {
                 sans: ['var(--font-baloo)', ...fontFamily.sans]

@@ -8,6 +8,7 @@
         --color-background: #d9d9d9;
         --color-headerlist: #02206f;
         --color-input: #d9d9d9;
+        --color-sidebar: #f0f0f0;
     }
 }
 
@@ -15,4 +16,13 @@
     .button {
         @apply bg-green-500 rounded-3xl text-3xl;
     }
+
+    .hr::before{
+        content: '';
+        position: absolute;
+        border: 1px solid black;
+        width: 100%;
+        bottom: 0;
+    }
+
 }

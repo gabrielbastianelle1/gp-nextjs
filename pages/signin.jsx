@@ -3,7 +3,7 @@ import Signin from '../components/signin/Signin'
 
 function signin() {
     return (
-        <Layout>
+        <Layout title="signin">
             <Signin />
         </Layout>
     )

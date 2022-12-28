@@ -14,6 +14,9 @@ const User = new mongoose.Schema(
         password: {
             type: String,
             required: [true, 'Insira a password']
+        },
+        dados: {
+            type: Object
         }
     },
 

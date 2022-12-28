@@ -5,7 +5,7 @@ import { host } from '../services/host'
 function Index() {
     fetch(`http://${host}:3000/api`)
     return (
-        <Layout>
+        <Layout title="mydata">
             <LandPage title="landpage" />
         </Layout>
     )
