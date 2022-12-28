@@ -5,10 +5,16 @@
 @layer base {
     :root {
         --color-button: #031954;
-        --color-background: #D9D9D9;
+        --color-background: #d9d9d9;
         --color-headerlist: #02206f;
+        --color-input: #d9d9d9;
     }
 }
 
 @layer components {
+
+    .button{
+        @apply bg-green-500 rounded-3xl text-3xl;
+    }
+
 }

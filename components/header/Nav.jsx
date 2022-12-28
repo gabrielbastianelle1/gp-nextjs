@@ -1,6 +1,5 @@
 import { MenuIcon } from '@heroicons/react/solid'
 import NavItem from './NavItem'
-import Link from 'next/link'
 
 export default function Nav({ setMobileMenu }) {
     const openMobileMenu = () => {
@@ -16,8 +15,8 @@ export default function Nav({ setMobileMenu }) {
 
             <nav className="hidden lg:block flex-grow">
                 <div className="flex justify-end space-x-20">
-                    <NavItem hrefLink="/signin" text="Login" />
-                    <NavItem hrefLink="/signup" text="Registo" />
+                    <NavItem hrefLink="/signin" text="LOGIN" />
+                    <NavItem hrefLink="/signup" text="REGISTO" />
                 </div>
             </nav>
         </>

@@ -6,7 +6,7 @@ export default function LandPage() {
             <span className="hidden lg:flex items-center justify-center">
                 <Landpage />
             </span>
-            <div className="flex flex-col space-y-10 p-20 text-2xl font-bold">
+            <div className="space-y-10 p-20  text-2xl">
                 <p>
                     Esta aplicação tem como objetivo ajudar a monitorar os dados
                     biomedicos de cada pessoa. Estes dados são obtidos através
