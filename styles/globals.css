@@ -17,12 +17,11 @@
         @apply bg-green-500 rounded-3xl text-3xl;
     }
 
-    .hr::before{
+    .hr::before {
         content: '';
         position: absolute;
         border: 1px solid black;
         width: 100%;
         bottom: 0;
     }
-
 }

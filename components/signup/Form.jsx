@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import useRouter from 'next/router'
 import Button from '../Button'
-import { signup } from '../../services/service.auth'
+import { signup } from '../../services/service.auth.memory'
 
 export default function Form() {
     const navigate = useRouter

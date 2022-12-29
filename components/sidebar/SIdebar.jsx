@@ -19,8 +19,8 @@ export default function Sidebar() {
             </p>
             <span className="flex flex-col w-4/5 m-auto p-10 items-center bg-white rounded-3xl space-y-4">
                 <User />
-                <div className="text-lg">
-                    <p>Nome: User</p>
+                <div className="text-base">
+                    <p>Nome: William</p>
                     <p>Idade: 34</p>
                     <p>Peso 80kg</p>
                 </div>
