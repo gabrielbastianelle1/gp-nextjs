@@ -8,7 +8,7 @@ export default function List() {
     useEffect(() => {
         setTimeout(() => {
             getCurrentUser().then((response) =>
-                setDados(response.data.user.dados)
+                setDados(response.data.user.dados.reverse())
             )
         }, 1000)
     }, [])

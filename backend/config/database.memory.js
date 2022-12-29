@@ -8,32 +8,28 @@ export const users = [
         peso: 65,
         dados: [
             {
-                id: 1,
                 pressao: 80,
                 batimento: 100,
                 sono: 10,
-                data: '29-12-2022'
+                data: '26 Dec 2022'
             },
             {
-                id: 2,
                 pressao: 85,
                 batimento: 80,
                 sono: 12,
-                data: '28-12-2022'
+                data: '27 Dec 2022'
             },
             {
-                id: 3,
                 pressao: 100,
                 batimento: 110,
                 sono: 5,
-                data: '27-12-2022'
+                data: '28 Dec 2022'
             },
             {
-                id: 4,
                 pressao: 82,
                 batimento: 100,
-                sono: 5,
-                data: '26-12-2022'
+                sono: 7,
+                data: '29 Dec 2022'
             }
         ]
     },

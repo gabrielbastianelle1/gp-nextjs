@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import List from '../List'
-import { medias } from './calcsAvarage'
+import { medias, toFixedIfNecessary, valoresAleatorios } from './calcsAvarage'
 import Button from '../Button'
+import { updateProfile } from '../../services/service.user.memory'
 
 export default function Home() {
     const [mediaPressao, setMediaPressao] = useState(0)
@@ -10,11 +11,20 @@ export default function Home() {
 
     useEffect(() => {
         medias().then((response) => {
-            setMediaBatimento(response.mediaBatimento)
-            setMediaPressao(response.mediaPressao)
-            setMediaSono(response.mediaSono)
+            setMediaBatimento(toFixedIfNecessary(response.mediaBatimento, 2))
+            setMediaPressao(toFixedIfNecessary(response.mediaPressao, 2))
+            setMediaSono(toFixedIfNecessary(response.mediaSono, 2))
         })
     }, [])
+
+    async function handleClick() {
+        console.log(valoresAleatorios())
+
+        window.alert('Seus dados foram sincronizados!')
+
+        let dados = valoresAleatorios()
+        await updateProfile({ dados })
+    }
 
     return (
         <main className="bg-userBackground flex-grow flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2">
@@ -51,7 +61,10 @@ export default function Home() {
                 <List title="Relógios desponiveis" className="w-2/3">
                     <p className="item-list">Mi band 3</p>
                     <p className="item-list">Apple-watch 4</p>
-                    <Button className="w-2/3 self-center bg-sincronizar text-white p-1">
+                    <Button
+                        onClick={handleClick}
+                        className="w-2/3 self-center bg-sincronizar text-white p-1"
+                    >
                         Sincronizar
                     </Button>
                 </List>

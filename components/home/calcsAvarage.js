@@ -25,3 +25,21 @@ export function medias() {
         resolve({ mediaSono, mediaPressao, mediaBatimento })
     })
 }
+
+export function valoresAleatorios() {
+    let pressao = Math.floor(Math.random() * (130 - 70)) + 70
+    let batimento = Math.floor(Math.random() * (150 - 70)) + 70
+    let sono = Math.floor(Math.random() * (12 - 3)) + 3
+
+    let data = new Date().toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+    })
+
+    return { pressao, batimento, sono, data }
+}
+
+export function toFixedIfNecessary(value, dp) {
+    return +parseFloat(value).toFixed(dp)
+}
