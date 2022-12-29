@@ -1,11 +1,11 @@
-import Home from '../../components/home/Home'
+import Profile from '../../components/profile/Profile'
 import Layout from '../../components/secondLayout/Layout'
 
-function user() {
+function profile() {
     return (
         <Layout title="Home">
-            <Home />
+            <Profile />
         </Layout>
     )
 }
-export default user
+export default profile

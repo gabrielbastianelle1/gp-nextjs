@@ -19,3 +19,7 @@ export async function signinController(req, res) {
         return res.status(404).json(error)
     }
 }
+
+export async function getCurrentUser(req, res) {
+    res.status(200).json(req.user)
+}

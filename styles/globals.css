@@ -6,9 +6,10 @@
     :root {
         --color-button: #031954;
         --color-background: #d9d9d9;
-        --color-headerlist: #02206f;
+        --color-headerlist: #FFD582;
         --color-input: #d9d9d9;
         --color-sidebar: #f0f0f0;
+        --color-sincronizar: #6C63FF;
     }
 }
 
@@ -24,4 +25,9 @@
         width: 100%;
         bottom: 0;
     }
+
+    .item-list{
+        @apply bg-userBackground w-10/12 m-auto rounded-3xl p-2 text-xl;
+    }
+
 }

@@ -18,7 +18,7 @@ export default function MobileMenu({ mobileMenu, setMobileMenu, options }) {
             >
                 <CloseButton className="w-5 h-5" />
             </span>
-            <div className="mt-40 grid items-center text-center space-y-7">
+            <div className="mt-40 grid items-center text-center space-y-7 text-2xl">
                 {options.map((option) => {
                     return (
                         <MenuItem

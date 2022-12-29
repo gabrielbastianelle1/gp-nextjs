@@ -1,12 +1,17 @@
 export const mobileOptions = [
     {
-        text: 'Perfil inicial',
+        text: 'Pagina inicial',
         href: '/user',
         className: ''
     },
     {
+        text: 'Perfil',
+        href: '/user/profile',
+        className: ''
+    },
+    {
         text: 'Historico',
-        href: '/historico',
+        href: '/user/registers',
         className: ''
     }
 ]
