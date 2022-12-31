@@ -21,7 +21,7 @@ export function signup({ email, password }) {
             id: result.length + 1,
             email: email,
             password: password,
-            nome: 'generico',
+            nome: 'William',
             idade: 20,
             peso: 70,
             dados: []
