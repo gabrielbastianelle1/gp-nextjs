@@ -35,11 +35,11 @@ export const users = [
     },
     {
         id: 2,
-        email: 'vasco@example.com',
-        password: '123',
-        nome: 'vasco',
-        idade: 22,
-        peso: 45,
+        email: 'williamjackson@example.com',
+        password: 'williamjackson',
+        nome: 'William',
+        idade: 80,
+        peso: 30,
         dados: []
     }
 ]
