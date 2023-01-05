@@ -4,6 +4,7 @@ import Header from './Header'
 
 export default function List() {
     const [dados, setDados] = useState(undefined)
+    const [max, setMax] = useState(105)
 
     useEffect(() => {
         setTimeout(() => {
@@ -25,7 +26,7 @@ export default function List() {
                     return (
                         <>
                             <p>{element.data}</p>
-                            <p>{element.batimento} bpm</p>
+                            <p className="text-red-600">{element.batimento}</p>
                             <p>{element.pressao} MMhG</p>
                             <p>{element.sono} h</p>
                         </>
