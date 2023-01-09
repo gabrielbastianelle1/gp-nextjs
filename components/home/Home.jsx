@@ -58,7 +58,7 @@ export default function Home() {
                 </List>
             </div>
             <div>
-                <List title="Relógios desponiveis" className="w-2/3">
+                <List title="Relógios desponiveis" className="lg:w-2/3">
                     <p className="item-list">Mi band 3</p>
                     <p className="item-list">Apple-watch 4</p>
                     <Button

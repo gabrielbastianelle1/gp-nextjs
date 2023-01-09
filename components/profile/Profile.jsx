@@ -2,6 +2,7 @@ import List from '../List'
 import { useEffect, useState } from 'react'
 import { getCurrentUser } from '../../services/service.auth'
 import Button from '../Button'
+import { User } from '../svgs'
 
 export default function Profile() {
     const [user, setUser] = useState(undefined)
@@ -16,6 +17,9 @@ export default function Profile() {
 
     return (
         <main className="bg-userBackground flex-grow">
+            <span className="mt-10 min-w-min lg:mt-0 lg:hidden flex flex-col w-4/5 m-auto p-10 items-center bg-white rounded-3xl space-y-4">
+                <User />
+            </span>
             <List title="Perfil">
                 <p className="item-list">Email: {user.email}</p>
                 <p className="item-list">Password: {user.password}</p>
