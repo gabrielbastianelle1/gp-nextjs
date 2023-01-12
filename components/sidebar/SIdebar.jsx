@@ -13,10 +13,11 @@ export default function Sidebar() {
 
     return (
         <main className="hidden min-w-[280px] lg:flex flex-col bg-sidebar">
-            <Link href="/user">
-                <p className=" relative hr w-full py-5 flex justify-center text-2xl cursor-pointer">
-                    Logo
-                </p>
+            <Link
+                className="relative hr w-full py-5 flex justify-center text-2xl cursor-pointer"
+                href="/user"
+            >
+                <img className="h-20" src="/images/logo.jpeg" />
             </Link>
             <Link href="/user">
                 <p className=" relative hr w-full py-5 flex justify-center text-2xl cursor-pointer">
