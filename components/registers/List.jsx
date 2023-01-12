@@ -26,9 +26,33 @@ export default function List() {
                     return (
                         <>
                             <p>{element.data}</p>
-                            <p className="text-red-600">{element.batimento}</p>
-                            <p>{element.pressao} MMhG</p>
-                            <p>{element.sono} h</p>
+                            <p
+                                className={`${
+                                    element.batimento > 105
+                                        ? 'text-red-600'
+                                        : 'text-black'
+                                }`}
+                            >
+                                {element.batimento}
+                            </p>
+                            <p
+                                className={`${
+                                    element.pressao > 110
+                                        ? 'text-red-600'
+                                        : 'text-black'
+                                }`}
+                            >
+                                {element.pressao} MMhG
+                            </p>
+                            <p
+                                className={`${
+                                    element.sono < 7 || element.sono > 10
+                                        ? 'text-red-600'
+                                        : 'text-black'
+                                }`}
+                            >
+                                {element.sono} h
+                            </p>
                         </>
                     )
                 })}
